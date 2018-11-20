@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <title>Flex Box</title>
+</head>
+<body style="height: 100%">
+    <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <div style="background-color: black; width: 200px; height: 200px; margin-right: 200px"></div>
+        <div style="background-color: red; width: 200px; height: 600px; display: flex; flex-direction: column; align-items: flex-end; justify-content: space-around">
+            <div style="background-color: yellow; width: 50px; height: 50px;"></div>
+            <div style="background-color: orange; width: 50px; height: 50px;"></div>
+            <div style="background-color: white; width: 50px; height: 50px;"></div>
+            <div style="background-color: black; width: 50px; height: 50px;"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+1. 플렉스 박스 원리
+ - 부모 요소에서 설정
+ - 플렉스 방향이 row, column방향 2개
+
+2. 플렉스 박스 사용법
+<!-- <div style="
+    display: flex; // 플렉스 박스 시작
+    flex-direction: row / column / row-revese / column-reverse; // 플렉스 방향
+    justify-content: center / flex-start / flex-end / space-around / space-between; // 플렉스 방향과 수평 조정
+    align-items: center / flex-start / flex-end / stretch; // 플렉스 방향과 수직 조정
+    flex-wrap: wrap / wrap-reverse;
+    flex-flow: row wrap / column wrap; // flex direction + flex wrap
+"></div> -->
+
+3. 실습
