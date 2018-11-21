@@ -1,0 +1,8 @@
+html, body{
+    height: 100%
+}
+
+.title{
+    font-size: 100px;
+    color: red;
+}
