@@ -5,7 +5,13 @@ class List extends React.Component{
     render(){
         return(
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-                <Name name={this.props.master1} exp={this.props.exp1}/>
+            {
+                this.props.master.map((master, i) => {
+                    return(
+                        <Name key={i} name={master.name} exp={master.exp}/>
+                    )
+                })
+            }
             </div>
         )
     }

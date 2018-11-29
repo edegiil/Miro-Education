@@ -4,11 +4,23 @@ import Input from './Input';
 
 class Box extends React.Component{
     state = {
-        master1: '김형진',
-        master2: '배이산',
-        master3: '문희조',
-        master4: '박기덕',
-        master5: '김수현',
+        master: [{ name: '김형진', exp: '회장' }, { name: '배이산', exp: '부회장' }, { name: '문희조', exp: '비선실세' }, { name: '박기덕', exp: '말단' }, { name: '김수현', exp: '말단' }],
+        name: '',
+        exp: ''            
+    }
+
+    addPeople = () => {
+        this.state.master.push({ name: this.state.name, exp: this.state.exp });
+        alert('작성되었습니다.');
+        this.setState({ name: '', exp: '' });
+    }
+
+    nameInput = (e) => {
+        this.setState({ name: e.target.value });
+    }
+
+    expInput = (e) => {
+        this.setState({ exp: e.target.value });
     }
 
     render(){
@@ -17,9 +29,9 @@ class Box extends React.Component{
             {
                 this.props.phase
                 ?
-                <Input/>
+                <Input name={this.nameInput} exp={this.expInput} add={this.addPeople}/>
                 :
-                <List master1={this.state.master1} master2={this.state.master2} master3={this.state.master3} master4={this.state.master4} master5={this.state.master5}/>
+                <List master={this.state.master}/>
             }
             </div>
         )
